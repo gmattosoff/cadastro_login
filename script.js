@@ -25,7 +25,9 @@ function cadastrar() {
 
     if (nome === '' || senha === '') {
         window.alert('Dados incompletos!')
-    } else if (senha.length < 6) {
+    } else if (nome.length < 4) {
+        window.alert('O nome de usuário deve ter no mínimo 4 dígitos!')
+    } if (senha.length < 6) {
         window.alert('A senha deve ter no mínimo 6 digitos!')
     } else if (senha === senha2 ) {
         if (!usuarios.some(u => u.nome === nome)) {
@@ -50,7 +52,9 @@ function recadastrar() {
 
     if (nome === '' || senha === '') {
         window.alert('Dados incompletos!')
-    } else if (senha.length < 6) {
+    } else if (nome.length < 4) {
+        window.alert('O nome de usuário deve ter no mínimo 4 dígitos!')
+    } if (senha.length < 6) {
         window.alert('A senha deve ter no mínimo 6 digitos!')
     } else if (senha === senha2) {
         var index = usuarios.findIndex(u => u.nome === nome);
