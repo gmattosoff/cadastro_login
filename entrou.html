@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrou</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Você entrou!</h1>
+    <section>
+        <div id="contas">
+            <h2>Contas registradas:</h2>
+        </div>
+        <button onclick="location.href='index.html'">Voltar</button>
+        <button onclick="apagar()">Deletar todas as contas</button>
+    </section>
+    <script>
+        function exibir() {
+            var usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+            var contas = document.getElementById('contas')
+                
+            for (var i=0; i<usuarios.length; i++) {
+                var conta = usuarios[i]
+                contas.innerHTML += '<p>Nome: ' + conta.nome + '</p>' + '<p>Senha: ' + conta.senha + '</p>'
+                contas.innerHTML += '<br>'
+            }
+        }
+        
+        function apagar() {
+            if (localStorage.getItem('usuarios')) {
+                localStorage.removeItem('usuarios')
+                location.reload()
+                window.alert('Todas as contas foram apagadas! Cadastre-se novamente!')
+            } else {
+                window.alert('Não há contas a serem deletadas!')
+            }
+        }
+
+        exibir()
+    </script>
+</body>
+</html>

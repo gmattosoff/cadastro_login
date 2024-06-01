@@ -1,0 +1,59 @@
+body {
+    background: url('imgs/quente.png');
+    background-attachment: fixed;
+    background-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.823);
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
+    flex-direction: column;
+    width: 400px;
+    height: 40%;
+}
+
+input {
+    width: 70%;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    margin-bottom: 35px;
+}
+
+button {
+    height: 34px;
+    width: 100px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 10px 0;
+}
+
+button:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+button:focus {
+    color: white;
+}
+
+p {
+    margin: 10px 0;
+}
