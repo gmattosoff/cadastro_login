@@ -25,6 +25,8 @@ function cadastrar() {
 
     if (nome === '' || senha === '') {
         window.alert('Dados incompletos!')
+    } else if (senha.length < 6) {
+        window.alert('A senha deve ter no mínimo 6 digitos!')
     } else if (senha === senha2 ) {
         if (!usuarios.some(u => u.nome === nome)) {
             usuarios.push({ nome: nome, senha: senha });
@@ -48,6 +50,8 @@ function recadastrar() {
 
     if (nome === '' || senha === '') {
         window.alert('Dados incompletos!')
+    } else if (senha.length < 6) {
+        window.alert('A senha deve ter no mínimo 6 digitos!')
     } else if (senha === senha2) {
         var index = usuarios.findIndex(u => u.nome === nome);
         if (index === -1) {
